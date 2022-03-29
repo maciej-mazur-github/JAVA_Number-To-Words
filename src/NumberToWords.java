@@ -14,6 +14,17 @@ public class NumberToWords {
         return digitCounter;
     }
 
+    public static int reverse(int number) {
+        int reversedNumber = 0;
+
+        while (number != 0) {
+            reversedNumber *= 10;
+            reversedNumber += number % 10;
+            number /= 10;
+        }
+
+        return reversedNumber;
+    }
 
 
     public static void main(String[] args) {
@@ -21,5 +32,10 @@ public class NumberToWords {
         System.out.println(getDigitCount(23));
         System.out.println(getDigitCount(345));
         System.out.println(getDigitCount(-1));
+        System.out.println("*****************************");
+        System.out.println(reverse(12345));
+        System.out.println(reverse(212));
+        System.out.println(reverse(432));
+        System.out.println(reverse(-234));
     }
 }
